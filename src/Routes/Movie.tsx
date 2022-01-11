@@ -149,10 +149,10 @@ const BigCover = styled.div`
 
 const BigTitle = styled.h3`
   color: ${(props) => props.theme.white.lighter};
-  padding: 20px;
+  /* padding: 20px; */
   font-size: 46px;
   position: absolute;
-  bottom: 200px;
+  bottom: 50%;
   font-weight: bold;
 `;
 
@@ -336,7 +336,9 @@ function Movie() {
                         bgphoto={makeImagePath(movie.poster_path, "w500")}
                       >
                         <Info variants={infoVariants}>
-                          <h4>{movie.title}</h4>
+                          <h4>
+                            {movie.title ? movie.title : "제목이 없습니다."}
+                          </h4>
                         </Info>
                       </Box>
                     ))}
@@ -376,7 +378,7 @@ function Movie() {
                         bgphoto={makeImagePath(movie.poster_path, "w500")}
                       >
                         <Info variants={infoVariants}>
-                          <h4>{movie.title}</h4>
+                          {movie.title ? movie.title : "제목이 없습니다."}
                         </Info>
                       </Box>
                     ))}
@@ -416,7 +418,7 @@ function Movie() {
                         bgphoto={makeImagePath(movie.poster_path, "w500")}
                       >
                         <Info variants={infoVariants}>
-                          <h4>{movie.title}</h4>
+                          {movie.title ? movie.title : "제목이 없습니다."}
                         </Info>
                       </Box>
                     ))}

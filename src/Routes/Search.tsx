@@ -1,14 +1,9 @@
 import { useQuery } from "react-query";
-import {
-  useHistory,
-  useLocation,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { getSearch, IGetSearch } from "../api/api";
 import { makeImagePath } from "../api/utils";
-import { AnimatePresence, motion, useViewportScroll } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Wrapper = styled.div`
   overflow: hidden;
@@ -35,7 +30,7 @@ const Items = styled.div`
 `;
 const Item = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
 `;
 const Box = styled(motion.div)<{ bgphoto: string }>`
@@ -73,7 +68,7 @@ const boxVariants = {
   },
   hover: {
     scale: 1.3,
-    y: -80,
+    y: -10,
     transition: {
       delay: 0.5,
       duaration: 0.1,

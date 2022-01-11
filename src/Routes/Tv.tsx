@@ -143,10 +143,10 @@ const BigCover = styled.div`
 `;
 const BigTitle = styled.h3`
   color: ${(props) => props.theme.white.lighter};
-  padding: 20px;
+  /* padding: 20px; */
   font-size: 46px;
   position: absolute;
-  bottom: 200px;
+  bottom: 50%;
   font-weight: bold;
 `;
 const BigOverview = styled.p`
@@ -333,7 +333,7 @@ function Tv() {
                         bgphoto={makeImagePath(tv.poster_path, "w500")}
                       >
                         <Info variants={infoVariants}>
-                          <h4>{tv.name}</h4>
+                          <h4>{tv.name ? tv.name : "제목이 없습니다.."}</h4>
                         </Info>
                       </Box>
                     ))}
@@ -371,7 +371,7 @@ function Tv() {
                         bgphoto={makeImagePath(tv.poster_path, "w500")}
                       >
                         <Info variants={infoVariants}>
-                          <h4>{tv.name}</h4>
+                          <h4>{tv.name ? tv.name : "제목이 없습니다.."}</h4>
                         </Info>
                       </Box>
                     ))}
@@ -408,7 +408,7 @@ function Tv() {
                         bgphoto={makeImagePath(tv.poster_path, "w500")}
                       >
                         <Info variants={infoVariants}>
-                          <h4>{tv.name}</h4>
+                          <h4>{tv.name ? tv.name : "제목이 없습니다.."}</h4>
                         </Info>
                       </Box>
                     ))}
