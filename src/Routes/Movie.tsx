@@ -378,7 +378,9 @@ function Movie() {
                         bgphoto={makeImagePath(movie.poster_path, "w500")}
                       >
                         <Info variants={infoVariants}>
-                          {movie.title ? movie.title : "제목이 없습니다."}
+                          <h4>
+                            {movie.title ? movie.title : "제목이 없습니다."}
+                          </h4>
                         </Info>
                       </Box>
                     ))}
@@ -418,7 +420,9 @@ function Movie() {
                         bgphoto={makeImagePath(movie.poster_path, "w500")}
                       >
                         <Info variants={infoVariants}>
-                          {movie.title ? movie.title : "제목이 없습니다."}
+                          <h4>
+                            {movie.title ? movie.title : "제목이 없습니다."}
+                          </h4>
                         </Info>
                       </Box>
                     ))}
