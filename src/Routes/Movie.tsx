@@ -318,7 +318,7 @@ function Movie() {
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  transition={{ type: "tween", duration: 1 }}
+                  transition={{ type: "tween", duration: 2 }}
                   key={nowIndex}
                 >
                   {nowPlayMovie?.results

@@ -12,15 +12,15 @@ import Tv from "./Routes/Tv";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
       <Router>
         <Header />
         <Switch>
-          <Route path={["/tv", "/tv/:tvId"]}>
-            <Tv />
-          </Route>
           <Route path={["/search", "/search/:searchId"]}>
             <Search />
+          </Route>
+          <Route path={["/tv", "/tv/:tvId"]}>
+            <Tv />
           </Route>
           <Route path={["/movie", "/movie/:movieId"]}>
             <Movie />
